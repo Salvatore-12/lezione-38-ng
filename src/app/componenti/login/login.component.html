@@ -1,11 +1,11 @@
 
-<form #loginform="ngForm" {ngSubmit}="onSubmit()">
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
 <mat-form-field>
-    <mat-label>Input</mat-label>
+    <mat-label>Email</mat-label>
     <input matInput>
   </mat-form-field>
   <mat-form-field>
-    <mat-label>Input</mat-label>
+    <mat-label>password</mat-label>
     <input matInput>
   </mat-form-field>
   <button mat-flat-button>Basic</button>
