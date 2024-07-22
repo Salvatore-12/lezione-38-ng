@@ -1,0 +1,16 @@
+h1{
+    text-transform:initial;
+    margin-top: 2%;
+    margin-left: 3%;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
