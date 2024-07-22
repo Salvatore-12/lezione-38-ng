@@ -1,12 +1,13 @@
+<h1>Login</h1>
 
-<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
-<mat-form-field>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <mat-form-field>
     <mat-label>Email</mat-label>
-    <input matInput>
+    <input matInput type="email" name="email" required ngModel>
   </mat-form-field>
   <mat-form-field>
     <mat-label>password</mat-label>
-    <input matInput>
+    <input matInput type="password" name="password" required ngModel>
   </mat-form-field>
-  <button mat-flat-button>Basic</button>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">invia</button>
 </form>
