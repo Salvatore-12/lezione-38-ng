@@ -1,12 +1,12 @@
+
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { SharedModule } from '../../shared.module';
+
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatFormFieldModule,
-            ReactiveFormsModule],
+  imports: [SharedModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

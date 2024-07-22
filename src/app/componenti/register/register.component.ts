@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { SharedModule } from '../../shared.module';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [MatFormFieldModule,
-            ReactiveFormsModule],
+  imports: [SharedModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })

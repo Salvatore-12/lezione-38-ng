@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { SharedModule } from '../../shared.module';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MatFormFieldModule,
-            ReactiveFormsModule],
+  imports: [SharedModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
