@@ -7,7 +7,7 @@ import { Pagina2Component } from './componenti/pagina2/pagina2.component';
 import { Pagina3Component } from './componenti/pagina3/pagina3.component';
 
 export const routes: Routes = [
-    {path:'',component:DashboardComponent, children:[
+    {path:'',component:DashboardComponent,canActivate:[], children:[
         {path:'', redirectTo:'pagina1', pathMatch: 'full'},
         {path:'pagina1', component: Pagina1Component},
         {path:'pagina2', component: Pagina2Component},
