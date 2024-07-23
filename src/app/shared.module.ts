@@ -11,6 +11,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   imports: [CommonModule,
             FormsModule,
@@ -21,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
             MatSidenavModule,
             MatListModule,
             MatToolbarModule,
-            MatIconModule,
+            MatIconModule, 
+            MatTableModule,
             ReactiveFormsModule,
             RouterModule,
             HttpClientModule],
@@ -36,6 +38,7 @@ import {MatIconModule} from '@angular/material/icon';
             MatListModule, 
             MatToolbarModule, 
             MatIconModule, 
+            MatTableModule, 
             ReactiveFormsModule, 
             RouterModule, 
             HttpClientModule]
