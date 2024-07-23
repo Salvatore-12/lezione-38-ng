@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../shared.module';
-export interface PeriodicElement {
-  name: string;
-  position: number;
+export interface PeriodicElement { // questo PeriodicElement è un oggetto con dentro le varie propietà,
+  name: string;                    // dove poi lo chiamamo dentro la costante ELEMENT_DATA,
+  position: number;                // ed deve rispettare le varie propietà di PeriodicElement
   weight: number;
   symbol: string;
 }
@@ -27,8 +27,9 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './pagina1.component.css'
 })
 export class Pagina1Component implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']; // nomi delle colonne
+  dataSource = ELEMENT_DATA; // sono i dati effettivi che li prende in questo caso ELEMENT_DATA,
+                             // chè è una costante
 
    constructor(){}
 
