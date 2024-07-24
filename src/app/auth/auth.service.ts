@@ -26,5 +26,12 @@ export class AuthService {
     return this.http.post(this.signInURL,{email: email, password: password, returnSecureToken: true})
   }
 
+  
+  logout(){
+    this.isLoggedIn = false
+    this.user = null
+    localStorage.removeItem('user')
+
+  }
 
 }
