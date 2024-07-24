@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SharedModule } from '../../shared.module';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../../auth/auth.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,15 +14,15 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class LoginComponent implements OnInit {
  
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService,private router: Router){}
 
   ngOnInit(): void {
    
   }
 
   onSubmit(form: NgForm){
-    const email = form.value
-    const password = form.value
+    const email = form.value.email
+    const password = form.value.password
     this.authService.signIn(email,password).subscribe((data: any) =>{
       console.log(data)
       const expirationDate = new Date(new Date().getTime() + data.expiresIn *1000)
@@ -30,6 +30,12 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('user',JSON.stringify(this.authService.user))
 
       console.log(this.authService.user)
+
+      this.router.navigate(['/'])
+  }, 
+  error => {
+    console.error('Error:', error);
+    console.error('Error Details:', error.error);
   })
     form.reset()
   }
