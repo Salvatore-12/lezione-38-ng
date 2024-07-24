@@ -9,5 +9,8 @@
     <mat-label>password</mat-label>
     <input matInput type="password" name="password" required ngModel>
   </mat-form-field>
-  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">invia</button>
+  <div class="loginFormStyle">
+  <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Accedi</button>
+  <button mat-raised-button color="primary" type="button" (click)="register()">registrati</button>
+</div>
 </form>
