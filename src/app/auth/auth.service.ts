@@ -13,7 +13,7 @@ export class AuthService {
   isLoggedIn = true
   user: User | null= null
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router,private authService: AuthService) { }
 
   createUser(email:string, id: string, token: string, expirationDate: Date){
     this.user = new User(email,id,token,expirationDate)
@@ -27,11 +27,16 @@ export class AuthService {
     return this.http.post(this.signInURL,{email: email, password: password, returnSecureToken: true})
   }
 
+  clearUser() {
+    this.user = null;
+  }
+
   
   logout(){
     this.isLoggedIn = false
     this.user = null
     localStorage.removeItem('user')
+    this.authService.clearUser();
     this.router.navigate(['/login'])
   }
 
