@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../modelli/user.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AuthService {
   isLoggedIn = true
   user: User | null= null
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   createUser(email:string, id: string, token: string, expirationDate: Date){
     this.user = new User(email,id,token,expirationDate)
@@ -31,7 +32,7 @@ export class AuthService {
     this.isLoggedIn = false
     this.user = null
     localStorage.removeItem('user')
-
+    this.router.navigate(['/login'])
   }
 
 }
