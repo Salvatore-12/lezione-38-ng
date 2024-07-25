@@ -13,10 +13,16 @@ export class AuthService {
   isLoggedIn = true
   user: User | null= null
 
-  constructor(private http: HttpClient, private router: Router,private authService: AuthService) { }
+  constructor(private http: HttpClient, private router: Router) { }
+
+  isAuthenticated(): boolean {
+    return this.isLoggedIn && this.user !== null;
+  }
 
   createUser(email:string, id: string, token: string, expirationDate: Date){
     this.user = new User(email,id,token,expirationDate)
+    this.isLoggedIn = true 
+    console.log('User created:', this.user);
   }
 
   signUp(email: string, password: string){
@@ -27,17 +33,19 @@ export class AuthService {
     return this.http.post(this.signInURL,{email: email, password: password, returnSecureToken: true})
   }
 
-  clearUser() {
-    this.user = null;
-  }
 
-  
   logout(){
     this.isLoggedIn = false
     this.user = null
     localStorage.removeItem('user')
-    this.authService.clearUser();
     this.router.navigate(['/login'])
+   
   }
 
+  clearUser() {
+    this.user = null;
+    this.isLoggedIn = false;
+  }
+
+ 
 }

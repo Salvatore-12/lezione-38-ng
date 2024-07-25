@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+  styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
   
@@ -20,13 +20,15 @@ export class RegisterComponent implements OnInit {
   onSubmit(form: NgForm){
     const email = form.value.email
     const password = form.value.password
+    console.log('Registering user with email:', email);
+
     this.authService.signUp(email,password).subscribe(data =>{
-    console.log(data)  
+    console.log('Registration successful:', data)  
     this.router.navigate(['/login'])
     }, 
     error => {
-      console.error('Error:', error);
+      console.error('Error during registration:', error);
     })
-    form.reset
+    form.reset()
   }
 }

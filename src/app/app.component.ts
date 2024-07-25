@@ -8,7 +8,7 @@ import { isPlatformBrowser } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
 
@@ -18,13 +18,7 @@ export class AppComponent implements OnInit {
               @Inject(PLATFORM_ID) private platformId: Object){}
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      const userString = localStorage.getItem('user');
-      if (userString) {
-        const user = JSON.parse(userString);
-        this.authService.createUser(user.email, user.id, user._token, user._expirationDate);
-      }
-    }
+    if (isPlatformBrowser(this.platformId)) {}
   }
 
   onLogout(){
