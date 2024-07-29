@@ -7,6 +7,12 @@
     background: #eee;
   }
 
+  .bottom-logout-button {
+    position: absolute;
+    bottom: 0;
+    left: 20%; 
+  }
+
   .active{
     background-color: red;
   }
