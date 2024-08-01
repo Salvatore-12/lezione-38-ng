@@ -20,5 +20,8 @@
   .example-spacer {
     flex: 1 1 auto;
   } 
+  mat-list{
+    margin-top: 58%;
+  }
 
  
