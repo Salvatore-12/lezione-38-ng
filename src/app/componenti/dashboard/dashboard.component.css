@@ -6,6 +6,10 @@
     right: 0;
     background: #eee;
   }
+.sidebarstyle{
+  background-color: rgb(189, 189, 189);
+  position:absolute
+}
 
   .bottom-logout-button {
     position: absolute;
@@ -14,16 +18,13 @@
   }
 
   .active{
-    background-color: red;
+    background-color: rgb(38, 166, 216);
   }
 
   .example-spacer {
     flex: 1 1 auto;
   } 
-  mat-list{
-    margin-top: 58%;
-    
-  }
+
   .listitem{
     border-radius: 50%;
     
