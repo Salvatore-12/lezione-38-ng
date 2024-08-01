@@ -22,6 +22,10 @@
   } 
   mat-list{
     margin-top: 58%;
+    
   }
-
+  .listitem{
+    border-radius: 50%;
+    border-style:hidden
+  }
  
