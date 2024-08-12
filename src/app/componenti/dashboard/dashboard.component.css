@@ -27,6 +27,7 @@
 
   .listitem{
     border-radius: 50%;
+    font-style: italic;
     
   }
   .colorButtonLogout{
