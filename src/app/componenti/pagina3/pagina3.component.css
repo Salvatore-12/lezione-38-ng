@@ -1,0 +1,19 @@
+.imageStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    
+      
+}
+
+.cardGattoStyle{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    
+   
+  
+   
+}
