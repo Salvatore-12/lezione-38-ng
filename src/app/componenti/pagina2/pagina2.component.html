@@ -1,7 +1,8 @@
 
 
 <div class="cardStyle">
-  <mat-card class="example-card" appearance="outlined" *ngFor="let card of cards">
+  <mat-card class="example-card" appearance="outlined" *ngFor="let card of cards" style="border: 0px;">
+    <div class="exampleStyle">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{ card.nome }}</mat-card-title>
@@ -12,5 +13,6 @@
       <span>{{card.tipoAnimale}}</span>
       <span>{{card.taglia}}</span>
     </mat-card-content>
+  </div>
   </mat-card>
 </div>
