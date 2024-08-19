@@ -1,0 +1,13 @@
+.cardStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+.imageStyle{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}

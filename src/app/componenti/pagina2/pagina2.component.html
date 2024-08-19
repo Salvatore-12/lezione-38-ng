@@ -1,1 +1,16 @@
-<p>pagina2 works!</p>
+
+
+<div class="cardStyle">
+  <mat-card class="example-card" appearance="outlined" *ngFor="let card of cards">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ card.nome }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="imageStyle" [src]="card.immagine" alt="{{ card.name }}">
+    <mat-card-content>
+      <p>{{ card.descrizione }}</p>
+      <span>{{card.tipoAnimale}}</span>
+      <span>{{card.taglia}}</span>
+    </mat-card-content>
+  </mat-card>
+</div>
