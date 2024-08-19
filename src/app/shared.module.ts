@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   imports: [CommonModule,
             FormsModule,
@@ -26,7 +27,8 @@ import {MatTableModule} from '@angular/material/table';
             MatTableModule,
             ReactiveFormsModule,
             RouterModule,
-            HttpClientModule],
+            HttpClientModule,
+            MatCardModule],
 
   exports: [CommonModule,
             FormsModule,
@@ -41,6 +43,6 @@ import {MatTableModule} from '@angular/material/table';
             MatTableModule, 
             ReactiveFormsModule, 
             RouterModule, 
-            HttpClientModule]
+            HttpClientModule,MatCardModule]
 })
 export class SharedModule { }
