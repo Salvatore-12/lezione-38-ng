@@ -1,4 +1,4 @@
-.cardStyle{
+.cardsStyle{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
 
 }
 
-.exampleStyle{
+.cardStyle{
     margin-right: 10px;
     margin-left: 10px;
     border: 3px solid rgb(55, 134, 223) ;
