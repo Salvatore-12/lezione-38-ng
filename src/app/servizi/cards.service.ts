@@ -15,4 +15,8 @@ export class CardsService {
   getCardsGatti(){
     return this.http.get("http://localhost:3001/cards/cards-gatto")
   }
+
+  getCardsUccelli(){
+    return this.http.get("http://localhost:3001/cards/cards-uccello")
+  }
 }
